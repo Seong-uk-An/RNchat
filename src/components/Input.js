@@ -64,7 +64,7 @@ const Input = forwardRef(
           maxLength={maxLength}
           autoCapitalize="none"
           autoCorrect={false}
-          textContentType="none" //iOS only
+          textContentType="password" //iOS only
           underlineColorAndroid="transparent" //Android only
         />
       </Container>
