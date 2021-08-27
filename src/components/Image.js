@@ -71,6 +71,7 @@ const Image = ({ url, imageStyle, rounded, showButton, onChangeImage }) => {
         aspect: [1, 1],
         quality: 1,
       });
+      console.log(result);
 
       if (!result.cancelled) {
         onChangeImage(result.uri);
@@ -83,7 +84,7 @@ const Image = ({ url, imageStyle, rounded, showButton, onChangeImage }) => {
   return (
     <Container>
       <StyledImage source={{ uri: url }} style={imageStyle} rounded={rounded} />
-      {showButton && <PhotoButton />}
+      {showButton && <PhotoButton onPress={_handleEditButton} />}
     </Container>
   );
 };
