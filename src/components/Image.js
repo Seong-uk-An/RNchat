@@ -8,6 +8,8 @@ const Container = styled.View`
 `;
 const StyledImage = styled.Image`
   background-color: ${({ theme }) => theme.imageBackground};
+  width: 100px;
+  height: 100px;
 `;
 
 const Image = ({ url, imageStyle }) => {
