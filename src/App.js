@@ -24,7 +24,7 @@ const App = () => {
   const [isReady, setIsReady] = useState(false);
 
   const _loadAssets = async () => {
-    const imageAssets = cacheImages([require("../assets/splash.jpeg")]);
+    const imageAssets = cacheImages([require("../assets/splash.png")]);
     const fontAssets = cacheFonts([]);
 
     await Promise.all([...imageAssets, ...fontAssets]);
