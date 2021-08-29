@@ -11,12 +11,7 @@ const ChannelCreation = ({ navigation }) => {
   return (
     <Container>
       <Text style={{ fontSize: 24 }}>Channel Creation</Text>
-      <Button
-        title="Channel"
-        onPress={() => {
-          navigation.navigate("Channel");
-        }}
-      />
+      <Button title="Channel" onPress={() => navigation.navigate("Channel")} />
     </Container>
   );
 };

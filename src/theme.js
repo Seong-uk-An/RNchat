@@ -19,6 +19,7 @@ export const theme = {
   label: colors.gray_1,
   inputPlaceholder: colors.gray_1,
   inputBorder: colors.gray_1,
+  inputDisabledBackground: colors.gray_0,
   buttonBackground: colors.blue,
   buttonTitle: colors.white,
   buttonUnfilledTitle: colors.blue,
