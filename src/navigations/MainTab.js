@@ -19,12 +19,22 @@ const TabBarIcon = ({ focused, name }) => {
 
 const MainTab = ({ navigation, route }) => {
   const theme = useContext(ThemeContext);
-  console.log(route);
 
   useEffect(() => {
     const titles = route.state?.routeNames || ["Channels"];
     const index = route.state?.index || 0;
-    navigation.setOptions({ headerTitle: titles[index] });
+    navigation.setOptions({
+      headerTitle: titles[index],
+      headerRight: () =>
+        index === 0 && (
+          <MaterialIcons
+            name="add"
+            size={26}
+            style={{ margin: 10 }}
+            onPress={() => navigation.navigate("Channel Creation")}
+          />
+        ),
+    });
   }, [route]);
 
   return (
@@ -32,10 +42,11 @@ const MainTab = ({ navigation, route }) => {
       screenOptions={{
         activeTintColor: theme.tabActiveColor,
         inactiveTintColor: theme.tabInactiveColor,
+        headerShown: false,
       }}
     >
       <Tab.Screen
-        name="Channel"
+        name="Channels"
         component={ChannelList}
         options={{
           tabBarIcon: ({ focused }) =>
