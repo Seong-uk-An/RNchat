@@ -8,6 +8,7 @@ const Container = styled.View`
 `;
 
 const Channel = ({ route }) => {
+  console.log(route);
   return (
     <Container>
       <Text style={{ fontSize: 24 }}>ID: {route.params?.id}</Text>

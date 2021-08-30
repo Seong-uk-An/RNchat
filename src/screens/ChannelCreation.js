@@ -1,11 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import { Alert } from "react-native";
 import { ProgressContext } from "../contexts";
 import { createChannel } from "../utils/firebase";
 import styled from "styled-components";
 import { Input, Button } from "../components";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { useContext } from "react/cjs/react.production.min";
 
 const Container = styled.View`
   flex: 1;
@@ -24,7 +23,6 @@ const ErrorText = styled.Text`
 `;
 
 const ChannelCreation = ({ navigation }) => {
-  console.log(4);
   const { spinner } = useContext(ProgressContext);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
