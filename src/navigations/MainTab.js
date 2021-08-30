@@ -19,6 +19,7 @@ const TabBarIcon = ({ focused, name }) => {
 
 const MainTab = ({ navigation, route }) => {
   const theme = useContext(ThemeContext);
+  console.log(route);
 
   useEffect(() => {
     const titles = route.state?.routeNames || ["Channels"];
@@ -34,7 +35,7 @@ const MainTab = ({ navigation, route }) => {
       }}
     >
       <Tab.Screen
-        name="Channels"
+        name="Channel"
         component={ChannelList}
         options={{
           tabBarIcon: ({ focused }) =>
