@@ -76,6 +76,12 @@ const Channel = ({ navigation, route: { params } }) => {
         listViewProps={{
           style: { backgroundColor: theme.background },
         }}
+        textInputProps={{
+          autoCapitalize: "none",
+          autoCorrect: false,
+          textContentType: "none",
+          underlineColorAndroid: "transparent",
+        }}
         placeholder="Enter a message..."
         messages={messages}
         user={{ _id: uid, name, avatar: photoUrl }}
